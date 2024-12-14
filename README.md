@@ -1,9 +1,16 @@
-# Cart Witnessing
+# Cart Witnessing Management
 
-This project is a fork of [JWManagement](https://github.com/JosefCevik/JWManagement) by Josef Cevik.
+This repository is a fork of [JWManagement](https://github.com/JosefCevik/JWManagement) by Josef Cevik.
+
+## Important Notice
+This version is specifically modified and intended to be used **only for Cart Witnessing** activities. It has been customized from the original JWManagement system to focus solely on cart witnessing coordination and management.
 
 ## About
-Cart Witnessing is a management system for organizing and coordinating cart witnessing activities.
+This system helps to organize and coordinate cart witnessing activities efficiently, including:
+- Managing cart locations
+- Scheduling shifts
+- Coordinating volunteers
+- Managing equipment
 
-## Original Project Attribution
-This project is based on the excellent work done in the JWManagement project. We appreciate the original author's contribution to the community.
+## Attribution
+We gratefully acknowledge the original JWManagement project as the foundation for this specialized version.
