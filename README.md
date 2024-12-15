@@ -1,6 +1,6 @@
-# What is JW Management?
+# What is CartWitnessing?
 
-JW Management is a highly configurable shift management system, built to power projects like the metropolitan witnessing, construction projects and/or similar.
+CartWitnessing is a shift management system for the inter-congregation cart witnessing. It is based on JW Management.
 
 ### Multiple Tags
 
@@ -9,10 +9,6 @@ Easily separate different shifts with tags; assign publishers to the tags where 
 ### Shift Teams
 
 Define one or more teams in a shift. Each will have it's own team-leader. Provide further information for every team, such as a description, a picture with a route, meetings points and more.
-
-### Store Room
-
-Manage your store room via JW Management. After each shift a team-leader can report whats been placed. The system then automatically updates the publications' stock with the number of placements taken.
 
 ### Notifications
 
@@ -103,52 +99,6 @@ Please follow the instructions to setup JW Management in your local dev environm
 9. Go to the settings page of the project and create a tag. For that tag, create a template week. Click on the template to edit it and add a few shifts.
 
 10. Go back and to the shifts page of your projects. Click on the blue button in the center and then on "Add new week". Fill out the popup and voila - you got your project and shifts set up :-)
-
-## Troubleshooting
-
-### Windows (outdated)
-
-If you are on Windows, you may encounter slow build times.
-One solution is to use the Windows Subsystem for Linux for the server runtime (nodejs), but running the mongodb under Windows. To achieve this do the following:
-
-1. Install the WSL see [Instructions for Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
-
-2. Once you have finished installing your Linux distribution you need to install
-
-  * Nodejs. See the [official nodejs instructions based on the choosen distribution](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions).
-  For example for ubuntu do:
-  ```
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo apt-get install -y nodejs
-```
-
-  * Metor:
-
-   ```
-   curl https://install.meteor.com/ | sh
-   ```
-
-  You do not need to clone the repository again in Linux. The directories and files in Windows are mounted directly with WSL.
-
-  Open the Terminal at the root of the project and execute ``bash``. You are now in Linux. Try it. Execute ``node``, then in the node REPL ``os.platform()``. This should give you back 'linux'.
-
- One more thing is needed: mongodb. Meteor installs mongodb for you but in this case we need our own instance of mongodb because meteor does not work or not work in a predictical way in WSL. For example it seems that mongodb in WSL can only be started from ``/mnt/c``. You need to install it anyway so better on Windows.
-
-  Go over to the [MongoDB Download Center](https://www.mongodb.com/download-center/community) and Download mongodb for Windows. If you choose the ZIP Version you can just unzip it to a choosen destination and add the bin Folder as an Environment variable in Windows. For example ``C:\Program Files (x86)\mongodb-win32-x86_64-2008plus-ssl-4.0.6\bin``.
-  Here is located ``mongod`` needed to start the dev db.
-
-  With this approach the development workflow is slightly different. You will
-
-  1. Start mongodb (from Windows):
-
-  ```mongod --port 3001 --bind_ip_all```
-
-  2. Start meteor (from Linux):
-
-  ```shell
-  bash
-  MONGO_URL=mongodb://{yourip}:3001/meteor meteor
-  ```
 
 
 
